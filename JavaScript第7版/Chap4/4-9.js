@@ -22,4 +22,25 @@ console.log("11" < "3")   // => true（文字列として比較）
 console.log("11" < 3)     // => false（数値として比較）
 console.log("eleven" < 3) // => false（文字列をNaNに変換してから比較）
 
-// 次回、P.90 4.9.3からスタート
+/**
+ * in演算子
+ * ・オブジェクトなら、キーに含まれるかどうかをチェック
+ * ・配列なら要素に含まれるかをチェック
+ */
+const point = { x: 2, y: 3 }
+console.log("x" in point)         // => true
+console.log("z" in point)         // => false
+console.log("toString" in point)  // => true（オブジェクトはtoStringメソッドを持つため）
+const range = [1, 2, 3, 4]
+console.log("0" in range)         // => true（配列には要素"0"が存在する、インデックス）
+console.log(1 in range)           // => true
+console.log(10 in range)          // => false
+
+/**
+ * instanceof演算子
+ * f.prototypeを評価し、プロトタイプチェーンの中に含まれていればtrueを返す
+ */
+const now = new Date()
+console.log(now instanceof Date)    // => true
+console.log(now instanceof Object)  // => true
+console.log(now instanceof Number)  // => false
