@@ -11,4 +11,7 @@ console.log(obj.square(10))  // => 100
 const arr = [x => x ** 2, 10]
 console.log(arr[0](arr[1]))  // => 100
 
-// 次回、P.222~
+/**
+ * 関数の独自プロパティ
+ * 後日フラグ
+ */
